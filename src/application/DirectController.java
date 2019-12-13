@@ -18,16 +18,16 @@ import javafx.stage.Stage;
 
 public class DirectController {
 	@FXML
-	private Text secondes;
+	private Text secondes, deuxM;
 	@FXML
 	private Text minutes;
 	@FXML
-	private ImageView startC, stopC; 
+	private ImageView startC, stopC, cartJaune, stratC, pauseC; 
 	int seconde=0, minute=0;
 	@FXML
 	private Button minB,bleu, jaune, rouge, annulTirG, annulTirD, arret, but, rate;
 	@FXML
-	private Pane selectionTir, tirLoc, affichageTir, selectionCarton, annulG, annulD, selectionMin;
+	private Pane tablG, listeJoueurs, selectionTir, tirLoc, affichageTir, selectionCarton, annulG, annulD, selectionMin;
 	@FXML
 	private RadioButton tireur1, tireur2, tireur3, tireur4, tireur5, tireur6, tireur7, tireur11, tireur21, tireur31, tireur41, tireur51, tireur61, tireur71,  tireur111, tireur211, tireur311, tireur411, tireur511, tireur611, tireur711;
 	
@@ -39,6 +39,8 @@ public class DirectController {
 		
 	chronoJm = Executors.newSingleThreadScheduledExecutor();
 	chronoJm.scheduleAtFixedRate(chronoRun,1000,1000,TimeUnit.MILLISECONDS);
+	stratC.setVisible(false);
+	pauseC.setVisible(true);
 	}
 	@FXML
 	final Runnable chronoRun = new Runnable() {
@@ -73,6 +75,8 @@ public class DirectController {
 	public void tirG(MouseEvent event){
 		annulTirG.setVisible(true);
 		selectionTir.setVisible(true);
+		tablG.setDisable(true);
+		tablG.setDisable(true);
 
 	}
 	
@@ -106,6 +110,8 @@ public class DirectController {
 	public void tirD(MouseEvent event){
 		annulTirD.setVisible(true);
 		selectionTir.setVisible(true);
+		tablG.setDisable(true);
+		tablG.setDisable(true);
 
 	}
 	
@@ -125,6 +131,8 @@ public class DirectController {
 		deselection();
 		selectionMin.setVisible(false);
 		selectionCarton.setVisible(false);
+		tablG.setDisable(false);
+		tablG.setDisable(false);
 	}
 	
 	
@@ -132,23 +140,31 @@ public class DirectController {
 	public void cartonG(MouseEvent event){
 		selectionCarton.setVisible(true);
 		annulTirG.setVisible(true);
+		tablG.setDisable(true);
+		tablG.setDisable(true);
 	}
 	@FXML
 	public void cartonD(MouseEvent event){
 		selectionCarton.setVisible(true);
 		annulTirD.setVisible(true);
+		tablG.setDisable(true);
+		tablG.setDisable(true);
 	}
 	
 	@FXML
 	public void minG(MouseEvent event){
 		selectionMin.setVisible(true);
 		annulTirG.setVisible(true);
+		tablG.setDisable(true);
+		tablG.setDisable(true);
 	}
 	
 	@FXML
 	public void minD(MouseEvent event){
 		selectionMin.setVisible(true);
 		annulTirD.setVisible(true);
+		tablG.setDisable(true);
+		tablG.setDisable(true);
 	}
 	
 	@FXML
@@ -195,6 +211,7 @@ public class DirectController {
 		jaune.setDisable(true);
 		rouge.setDisable(true);
 		deselection();
+		cartJaune.setVisible(true);
 	}
 	
 	@FXML
@@ -204,5 +221,16 @@ public class DirectController {
 		annulTirG.setVisible(false);
 		selectionMin.setVisible(false);
 		deselection();
+		deuxM.setVisible(true);
+	}
+	
+	@FXML
+	private void afficheJ(){ 
+		listeJoueurs.setVisible(true);
+	}
+	
+	@FXML
+	private void enleveLJ(){ 
+		listeJoueurs.setVisible(false);
 	}
 }
