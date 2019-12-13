@@ -67,7 +67,13 @@ public class PrincipalController {
 		choisirJournee.setItems(choisirJournee1);
 		choisirMatch.setValue("1");
 		}
-
+	
+	@FXML
+	private void loc(){ 
+		choisirMatch.setItems(choisirMatch1);
+		choisirJournee.setItems(choisirJournee1);
+		choisirMatch.setValue("1");
+		}
 	
 
 }

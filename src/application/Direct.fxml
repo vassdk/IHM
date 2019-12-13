@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="800.0" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DirectController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="800.0" prefHeight="601.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DirectController">
    <children>
-      <Pane layoutX="466.0" layoutY="25.0" prefHeight="121.0" prefWidth="210.0">
+      <Pane layoutX="487.0" layoutY="29.0" prefHeight="121.0" prefWidth="210.0">
          <children>
             <ImageView fitHeight="142.0" fitWidth="270.0" layoutX="-14.0" layoutY="-10.0">
                <image>
@@ -42,23 +45,285 @@
             </Text>
          </children>
       </Pane>
-      <Pane fx:id="affichageTir" layoutX="416.0" layoutY="224.0" prefHeight="275.0" prefWidth="312.0">
+      <Pane fx:id="affichageTir" layoutX="416.0" layoutY="224.0" prefHeight="275.0" prefWidth="312.0" visible="false">
          <children>
             <ImageView fitHeight="275.0" fitWidth="210.0" layoutX="62.0" layoutY="-13.0" rotate="90.0">
                <image>
                   <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/terrain.PNG" />
                </image>
             </ImageView>
-            <Circle fx:id="sAilierD" fill="RED" layoutX="252.0" layoutY="56.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="sArriereD" fill="RED" layoutX="227.0" layoutY="83.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="sCentre" fill="RED" layoutX="167.0" layoutY="99.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="sArriereG" fill="RED" layoutX="112.0" layoutY="83.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="sAilierG" fill="RED" layoutX="84.0" layoutY="56.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="nAilierD" fill="RED" layoutX="278.0" layoutY="83.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="nArriereD" fill="RED" layoutX="244.0" layoutY="107.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="nCentre" fill="RED" layoutX="167.0" layoutY="125.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="nArriereG" fill="RED" layoutX="92.0" layoutY="107.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="nAilierG" fill="RED" layoutX="57.0" layoutY="83.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="sAilierD" fill="RED" layoutX="252.0" layoutY="56.0" onMouseClicked="#annulTir" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="sArriereD" fill="RED" layoutX="227.0" layoutY="83.0" onMouseClicked="#annulTir" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="sCentre" fill="RED" layoutX="167.0" layoutY="99.0" onMouseClicked="#annulTir" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="sArriereG" fill="RED" layoutX="112.0" layoutY="83.0" onMouseClicked="#annulTir" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="sAilierG" fill="RED" layoutX="84.0" layoutY="56.0" onMouseClicked="#annulTir" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="nAilierD" fill="RED" layoutX="278.0" layoutY="83.0" onMouseClicked="#annulTir" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="nArriereD" fill="RED" layoutX="244.0" layoutY="107.0" onMouseClicked="#annulTir" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="nCentre" fill="RED" layoutX="167.0" layoutY="125.0" onMouseClicked="#annulTir" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="nArriereG" fill="RED" layoutX="92.0" layoutY="107.0" onMouseClicked="#annulTir" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="nAilierG" fill="RED" layoutX="57.0" layoutY="83.0" onMouseClicked="#annulTir" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <Pane layoutX="9.0" layoutY="207.0" prefHeight="381.0" prefWidth="355.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="387.0" stroke="BLACK" strokeType="INSIDE" width="361.0" />
+            <Button contentDisplay="TOP" layoutX="24.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#tirG" prefHeight="95.0" prefWidth="84.0" style="-fx-background-color: #FFA32C;" text="Tir">
+               <graphic>
+                  <ImageView fx:id="tir11" fitHeight="66.0" fitWidth="69.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/ballon-png.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="130.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#cartonG" prefHeight="108.0" prefWidth="95.0" style="-fx-background-color: #FFA32C;" text="Carton">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="61.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/carton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="236.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#minG" prefHeight="108.0" prefWidth="109.0" style="-fx-background-color: #FFA32C;" text="2&quot;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="66.0" fitWidth="56.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/Sanction.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="24.0" layoutY="140.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="95.0" style="-fx-background-color: #FFA32C;" text="Temps">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="61.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/chrono.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="128.0" layoutY="140.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="216.0" style="-fx-background-color: #FFA32C;" text="Remplacement">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="61.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/remplacement.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="22.0" layoutY="259.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="321.0" style="-fx-background-color: #FFA32C;" text="Liste des joueurs">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="61.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/maillot.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="selectionTir" layoutX="465.0" layoutY="207.0" prefHeight="381.0" prefWidth="259.0" style="-fx-background-color: #FFA32C;" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="395.0" layoutX="-5.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="275.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="26.0" layoutX="58.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="176.0" />
+            <Text layoutX="80.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selectionne le tireur" />
+            <Button fx:id="rate" disable="true" layoutX="27.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Tir raté" />
+            <Button fx:id="arret" disable="true" layoutX="118.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Arret " />
+            <Button fx:id="but" disable="true" layoutX="198.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#locTirCage" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="BUT" />
+            <RadioButton fx:id="tireur1" layoutX="225.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#deveTir" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur2" layoutX="225.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#deveTir" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur3" layoutX="225.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#deveTir" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur4" layoutX="225.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#deveTir" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur5" layoutX="225.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#deveTir" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur6" layoutX="225.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#deveTir" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur7" layoutX="225.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#deveTir" prefHeight="17.0" prefWidth="5.0" />
+            <Text layoutX="52.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOSELLA Bernard" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AMAH Nadir" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OURA Ichi" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KAYDOP Alex" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PEAK Malek" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAINON Messi" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BRUNEL Florenc" wrappingWidth="131.65673828125" />
+         </children>
+      </Pane>
+      <Pane fx:id="tirLoc" layoutX="387.0" layoutY="207.0" prefHeight="210.0" prefWidth="426.0" style="-fx-background-color: #FFA32C;" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="210.0" stroke="BLACK" strokeType="INSIDE" width="426.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="35.0" layoutX="112.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" style="ba: #FFA32C;" width="222.0" />
+         	 <Text layoutX="130.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selectionne la position du tir" />
+            <Button layoutX="10.0" layoutY="48.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Lucarne gauche" />
+            <Button layoutX="10.0" layoutY="90.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Milieu gauche" />
+            <Button layoutX="10.0" layoutY="138.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Bas gauche" />
+            <Button layoutX="300.0" layoutY="48.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Lucarne droite" />
+            <Button layoutX="150.0" layoutY="48.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Lucarne gauche" />
+            <Button layoutX="150.0" layoutY="90.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Centre" />
+            <Button layoutX="150.0" layoutY="138.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Lucarne gauche" />              
+            <Button layoutX="300.0" layoutY="90.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Milieu droit" />        
+            <Button layoutX="300.0" layoutY="138.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#locTir" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="Bas droit" />
+         </children>
+      </Pane>
+      <Pane layoutX="831.0" layoutY="207.0" prefHeight="381.0" prefWidth="355.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="387.0" stroke="BLACK" strokeType="INSIDE" width="361.0" />
+            <Button contentDisplay="TOP" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#tirD" prefHeight="95.0" prefWidth="84.0" style="-fx-background-color: #FFA32C;" text="Tir">
+               <graphic>
+                  <ImageView fx:id="tir1" fitHeight="66.0" fitWidth="69.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/ballon-png.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="130.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#cartonD" prefHeight="108.0" prefWidth="95.0" style="-fx-background-color: #FFA32C;" text="Carton">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="61.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/carton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="238.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#minD" prefHeight="108.0" prefWidth="109.0" style="-fx-background-color: #FFA32C;" text="2&quot;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="66.0" fitWidth="56.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/Sanction.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="20.0" layoutY="137.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="95.0" style="-fx-background-color: #FFA32C;" text="Temps">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="61.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/chrono.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="130.0" layoutY="137.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="216.0" style="-fx-background-color: #FFA32C;" text="Remplacement">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="61.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/remplacement.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="20.0" layoutY="259.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="327.0" style="-fx-background-color: #FFA32C;" text="Liste des joueurs">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="61.0">
+                     <image>
+                        <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/maillot.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="selectionCarton" focusTraversable="true" layoutX="461.0" layoutY="217.0" prefHeight="371.0" prefWidth="270.0" style="-fx-background-color: #FFA32C;" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="381.0" layoutX="-5.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="275.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="26.0" layoutX="58.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="176.0" />
+            <Text layoutX="80.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selectionne le joueur" />
+            <Button fx:id="bleu" disable="true" layoutX="27.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#cartonExec" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="bleu" />
+            <Button fx:id="jaune" disable="true" layoutX="118.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#cartonExec" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="jaune" />
+            <Button fx:id="rouge" disable="true" layoutX="198.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#cartonExec" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="rouge" />
+            <RadioButton fx:id="tireur11" layoutX="225.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#deveCart" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur21" layoutX="225.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#deveCart" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur31" layoutX="225.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#deveCart" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur41" layoutX="225.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#deveCart" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur51" layoutX="225.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#deveCart" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur61" layoutX="225.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#deveCart" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur71" layoutX="225.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#deveCart" prefHeight="17.0" prefWidth="5.0" />
+            <Text layoutX="52.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOSELLA Bernard" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AMAH Nadir" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OURA Ichi" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KAYDOP Alex" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PEAK Malek" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAINON Messi" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BRUNEL Florenc" wrappingWidth="131.65673828125" />
+         </children>
+      </Pane>
+      <Pane fx:id="selectionMin" layoutX="471.0" layoutY="227.0" prefHeight="368.0" prefWidth="270.0" style="-fx-background-color: #FFA32C;" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="371.0" layoutX="-5.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="275.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="26.0" layoutX="58.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="176.0" />
+            <Text layoutX="80.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selectionne le joueur" />
+            <Button fx:id="minB" disable="true" layoutX="93.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#minutes" style="-fx-background-radius: 5em; -fx-border-radius: 5em;" text="2 minutes" />
+            <RadioButton fx:id="tireur111" layoutX="225.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#deveMin" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur211" layoutX="225.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#deveMin" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur311" layoutX="225.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#deveMin" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur411" layoutX="225.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#deveMin" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur511" layoutX="225.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#deveMin" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur611" layoutX="225.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#deveMin" prefHeight="17.0" prefWidth="5.0" />
+            <RadioButton fx:id="tireur711" layoutX="225.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#deveMin" prefHeight="17.0" prefWidth="5.0" />
+            <Text layoutX="52.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOSELLA Bernard" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AMAH Nadir" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OURA Ichi" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KAYDOP Alex" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PEAK Malek" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAINON Messi" wrappingWidth="131.65673828125" />
+            <Text layoutX="52.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BRUNEL Florenc" wrappingWidth="131.65673828125" />
+         </children>
+      </Pane>
+      <Text layoutX="76.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entraineur : BRASSEL Thomas" wrappingWidth="222.0" />
+      <Text layoutX="898.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entraineur : POURIAR Julien" wrappingWidth="222.0" />
+      <Button fx:id="annulTirD" layoutX="755.0" layoutY="562.0" mnemonicParsing="false" onMouseClicked="#annulTir" text="Annuler" visible="false" />
+      <Button fx:id="annulTirG" layoutX="379.0" layoutY="562.0" mnemonicParsing="false" onMouseClicked="#annulTir" prefHeight="26.0" prefWidth="75.0" text="Annuler " visible="false" />
+      <Pane fx:id="selectionTir1" layoutX="475.0" layoutY="217.0" prefHeight="371.0" prefWidth="259.0" style="-fx-background-color: #FFA32C;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="381.0" layoutX="-57.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="361.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="26.0" layoutX="-17.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="83.0" />
+            <Text layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joueurs" />
+            <Text layoutX="-32.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7- NOSELLA Bernard" wrappingWidth="145.65673828125" />
+            <Text layoutX="-32.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1- AMAH Nadir" wrappingWidth="145.65673828125" />
+            <Text layoutX="-18.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OURA Ichi" wrappingWidth="131.65673828125" />
+            <Text layoutX="-18.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KAYDOP Alex" wrappingWidth="131.65673828125" />
+            <Text layoutX="-18.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PEAK Malek" wrappingWidth="131.65673828125" />
+            <Text layoutX="-18.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAINON Messi" wrappingWidth="131.65673828125" />
+            <Text layoutX="-18.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BRUNEL Florenc" wrappingWidth="131.65673828125" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffa32c" height="26.0" layoutX="170.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="109.0" />
+            <Text layoutX="177.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remplaçants" />
+            <Text layoutX="170.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOSELLA Bernard" wrappingWidth="131.65673828125" />
+            <Line endX="-20.0" endY="349.0" layoutX="149.0" layoutY="29.0" startX="-20.0" startY="-33.0" />
          </children>
       </Pane>
    </children>
