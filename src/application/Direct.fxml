@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="200.0" minWidth="800.0" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DirectController">
+   <children>
+      <Pane layoutX="466.0" layoutY="25.0" prefHeight="121.0" prefWidth="210.0">
+         <children>
+            <ImageView fitHeight="142.0" fitWidth="270.0" layoutX="-14.0" layoutY="-10.0">
+               <image>
+                  <Image url="@../../img/CADRE_062.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#020001" height="121.0" layoutX="12.0" stroke="BLACK" strokeType="INSIDE" width="222.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="45.0" layoutX="71.0" layoutY="74.0" stroke="WHITE" strokeType="INSIDE" width="109.0" />
+            <Text fx:id="minutes" fill="WHITE" layoutX="88.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" />
+            <Text fill="WHITE" layoutX="110.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" wrappingWidth="5.0" />
+            <Text fx:id="secondes" fill="WHITE" layoutX="118.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" />
+            <ImageView fx:id="stratC" fitHeight="26.0" fitWidth="31.0" layoutX="144.0" layoutY="87.0" onMouseClicked="#startCh">
+               <image>
+                  <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/play-button.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="6.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toulouse" />
+            <Text fill="WHITE" layoutX="179.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tremblay" />
+            <Text fill="RED" layoutX="28.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text fill="RED" layoutX="203.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="affichageTir" layoutX="416.0" layoutY="224.0" prefHeight="275.0" prefWidth="312.0">
+         <children>
+            <ImageView fitHeight="275.0" fitWidth="210.0" layoutX="62.0" layoutY="-13.0" rotate="90.0">
+               <image>
+                  <Image url="@../../../../../../../../home/50/vddkdroziere/eclipse-workspace/HandballProjet/img/terrain.PNG" />
+               </image>
+            </ImageView>
+            <Circle fx:id="sAilierD" fill="RED" layoutX="252.0" layoutY="56.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="sArriereD" fill="RED" layoutX="227.0" layoutY="83.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="sCentre" fill="RED" layoutX="167.0" layoutY="99.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="sArriereG" fill="RED" layoutX="112.0" layoutY="83.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="sAilierG" fill="RED" layoutX="84.0" layoutY="56.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="nAilierD" fill="RED" layoutX="278.0" layoutY="83.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="nArriereD" fill="RED" layoutX="244.0" layoutY="107.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="nCentre" fill="RED" layoutX="167.0" layoutY="125.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="nArriereG" fill="RED" layoutX="92.0" layoutY="107.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="nAilierG" fill="RED" layoutX="57.0" layoutY="83.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
