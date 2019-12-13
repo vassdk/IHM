@@ -1,62 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="868.0" style="-fx-background-image: url('../home/50/vddkdroziere/Images/HandBG.png');" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PrincipalController">
-   <children>
-      <Pane prefHeight="536.0" prefWidth="434.0" style="-fx-background-image: url('../home/50/vddkdroziere/Images/HandBG.png');">
-         <children>
-            <ImageView fitHeight="536.0" fitWidth="434.0">
-               <image>
-                  <Image url="@../../img/HandBG.png" />
-               </image>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="868.0" style="-fx-background-image: url('../home/50/vddkdroziere/Images/HandBG.png');" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.PrincipalController">
+  <children>
+    <Pane prefHeight="536.0" prefWidth="434.0" style="-fx-background-image: url('../home/50/vddkdroziere/Images/HandBG.png');">
+      <children>
+        <ImageView fitHeight="536.0" fitWidth="434.0">
+          <image>
+            <Image url="@../../img/HandBG.png" />
+          </image>
+        </ImageView>
+        <Button fx:id="principal" disable="true" layoutX="186.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#openMatch" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color:#FFC900;" text="Go" />
+        <ChoiceBox fx:id="choisirMatch" disable="true" layoutX="186.0" layoutY="373.0" onMouseClicked="#openGo" prefWidth="150.0" style="-fx-background-color:#FFC900;" />
+        <ChoiceBox fx:id="choisirJournee" layoutX="186.0" layoutY="300.0" onMouseClicked="#openM" prefHeight="28.0" prefWidth="150.0" style="-fx-background-color:#FFC900;" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="153.0" layoutY="184.0" prefHeight="18.0" prefWidth="108.0" style="text: Gold;" text="Matchs" textOverrun="CENTER_ELLIPSIS">
+          <font>
+            <Font name="System Bold" size="14.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" layoutX="116.0" layoutY="240.0" prefHeight="18.0" prefWidth="183.0" text="Saisie des matchs :" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+        <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" layoutX="14.0" layoutY="305.0" prefHeight="18.0" prefWidth="183.0" text="Choisis la journée" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+        <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" layoutX="14.0" layoutY="378.0" prefHeight="18.0" prefWidth="183.0" text="Choisis le match " textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+      </children>
+    </Pane>
+    <Pane layoutX="434.0" prefHeight="536.0" prefWidth="434.0" style="-fx-background-image: url('../home/50/vddkdroziere/Images/HandBG.png');">
+      <children>
+        <Label text="Ligue" />
+        <ImageView fitHeight="536.0" fitWidth="434.0">
+          <image>
+            <Image url="@../../img/hand2.jpg" />
+          </image>
+        </ImageView>
+        <Label alignment="CENTER" contentDisplay="CENTER" font="$x1" layoutX="190.0" layoutY="156.0" prefHeight="18.0" prefWidth="183.0" text="Ligue" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+        <Button contentDisplay="LEFT" layoutX="137.0" layoutY="278.0" minHeight="51.0" minWidth="107.99997792968497" mnemonicParsing="false" onMouseClicked="#openLigue" prefHeight="51.0" prefWidth="159.99997792968497" style="-fx-background-color:#FFC900;" text="classement" textFill="BLACK">
+          <graphic>
+            <ImageView id="kisspng-trophy-award-prize-gold-medal-gold-trophy-5ad7a0c9a83d06.9518883315240808416891.png" fitHeight="32.0" fitWidth="41.0">
+              <image>
+                <Image url="@../../img/kisspng-trophy-award-prize-gold-medal-gold-trophy-5ad7a0c9a83d06.9518883315240808416891.png" preserveRatio="true" smooth="true" />
+              </image>
             </ImageView>
-            <Button fx:id="principal" disable="true" layoutX="186.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#openMatch" prefHeight="32.0" prefWidth="108.0" text="Go" />
-            <ChoiceBox fx:id="choisirMatch" disable="true" layoutX="186.0" layoutY="373.0" onMouseClicked="#openGo" prefWidth="150.0" />
-            <ChoiceBox fx:id="choisirJournee" layoutX="186.0" layoutY="300.0" onMouseClicked="#openM" prefHeight="28.0" prefWidth="150.0" />
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="153.0" layoutY="184.0" prefHeight="18.0" prefWidth="108.0" style="text: Gold;" text="Matchs" textOverrun="CENTER_ELLIPSIS">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="240.0" prefHeight="18.0" prefWidth="183.0" text="Saisie des matchs :" textOverrun="CENTER_ELLIPSIS" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="305.0" prefHeight="18.0" prefWidth="183.0" text="Choisis la journée" textOverrun="CENTER_ELLIPSIS" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="378.0" prefHeight="18.0" prefWidth="183.0" text="Choisis le match " textOverrun="CENTER_ELLIPSIS" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-      <Pane layoutX="434.0" prefHeight="536.0" prefWidth="434.0" style="-fx-background-image: url('../home/50/vddkdroziere/Images/HandBG.png');">
-         <children>
-            <Label text="Ligue" />
-            <ImageView fitHeight="536.0" fitWidth="434.0">
-               <image>
-                  <Image url="@../../img/hand2.jpg" />
-               </image>
+          </graphic>
+        </Button>
+        <Button contentDisplay="LEFT" layoutX="137.0" layoutY="352.0" minHeight="51.0" minWidth="107.99997792968497" mnemonicParsing="false" onMouseClicked="#openCal" prefHeight="51.0" prefWidth="159.99997792968497" style="-fx-background-color:#FFC900;" text="Calendrier" textFill="BLACK">
+          <graphic>
+            <ImageView id="simple-black-calendar-256.png" fitHeight="37.0" fitWidth="36.0">
+              <image>
+                <Image url="@../../img/simple-black-calendar-256.png" preserveRatio="true" smooth="true" />
+              </image>
             </ImageView>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="190.0" layoutY="156.0" prefHeight="18.0" prefWidth="183.0" text="Ligue" textOverrun="CENTER_ELLIPSIS" wrapText="true">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-   </children>
+          </graphic>
+        </Button>
+        <Button contentDisplay="LEFT" layoutX="137.0" layoutY="431.0" minHeight="51.0" minWidth="107.99997792968497" mnemonicParsing="false" onMouseClicked="#openStats" prefHeight="51.0" prefWidth="159.99997792968497" style="-fx-background-color:#FFC900;" text="Statistiques" textFill="BLACK">
+          <graphic>
+            <ImageView id="stats.png" fitHeight="28.0" fitWidth="41.0">
+              <image>
+                <Image url="@../../img/stats.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </graphic>
+        </Button>
+      </children>
+    </Pane>
+  </children>
 </AnchorPane>

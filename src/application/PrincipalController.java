@@ -17,7 +17,7 @@ import javafx.scene.layout.Pane;
 public class PrincipalController {
 	
 	ObservableList<String> choisirMatch1 = FXCollections.observableArrayList("Creteil - Chartres", "Dunkerque - Ivry", "Nimes - Montpellier", "Paris-SG - HBC Nantes", "Tremblay - Toulouse", "Aix-en-Proven. - Chambéry" );
-	ObservableList<String> choisirJournee1 = FXCollections.observableArrayList("1e journée", "2e journée", "3e journée", "4e journée", "5e journée", "6e journée" );
+	ObservableList<String> choisirJournee1 = FXCollections.observableArrayList("1e journee", "2e journee", "3e journee", "4e journee", "5e journee", "6e journee" );
 	@FXML
 	private Button principal;
 	@FXML
@@ -32,7 +32,7 @@ public class PrincipalController {
 	public void openMatch(MouseEvent event) throws IOException {
 		FXMLLoader fxmlLoader = new FXMLLoader();
 		fxmlLoader.setLocation(getClass().getResource("Direct.fxml"));
-		Scene scene = new Scene(fxmlLoader.load(), 1200, 600);
+		Scene scene = new Scene(fxmlLoader.load(), 1300, 700);
 		Stage stage = new Stage();
 		stage.setScene(scene);
 		stage.show();
@@ -42,12 +42,31 @@ public class PrincipalController {
 	@FXML
 	public void openLigue(MouseEvent event) throws IOException {
 		FXMLLoader fxmlLoader = new FXMLLoader();
-		fxmlLoader.setLocation(getClass().getResource("Ligue.fxml"));
-		Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+		fxmlLoader.setLocation(getClass().getResource("classement.fxml"));
+		Scene scene = new Scene(fxmlLoader.load(), 525, 630);
 		Stage stage = new Stage();
 		stage.setScene(scene);
 		stage.show();
-		stage.setMaximized(true);
+	}
+	
+	@FXML
+	public void openCal(MouseEvent event) throws IOException {
+		FXMLLoader fxmlLoader = new FXMLLoader();
+		fxmlLoader.setLocation(getClass().getResource("Calendrier.fxml"));
+		Scene scene = new Scene(fxmlLoader.load(), 600, 700);
+		Stage stage = new Stage();
+		stage.setScene(scene);
+		stage.show();
+	}
+	
+	@FXML
+	public void openStats(MouseEvent event) throws IOException {
+		FXMLLoader fxmlLoader = new FXMLLoader();
+		fxmlLoader.setLocation(getClass().getResource("Statistiques.fxml"));
+		Scene scene = new Scene(fxmlLoader.load(), 1300, 700);
+		Stage stage = new Stage();
+		stage.setScene(scene);
+		stage.show();
 	}
 	
 	@FXML

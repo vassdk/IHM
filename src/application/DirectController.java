@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 
 public class DirectController {
 	@FXML
-	private Text secondes, deuxM;
+	private Text secondes, deuxM, scoreG, decompte, decompte2;
 	@FXML
 	private Text minutes;
 	@FXML
@@ -27,7 +27,7 @@ public class DirectController {
 	@FXML
 	private Button minB,bleu, jaune, rouge, annulTirG, annulTirD, arret, but, rate;
 	@FXML
-	private Pane tablG, listeJoueurs, selectionTir, tirLoc, affichageTir, selectionCarton, annulG, annulD, selectionMin;
+	private Pane tablG, tablD, listeJoueurs, selectionTir, tirLoc, affichageTir, selectionCarton, annulG, annulD, selectionMin;
 	@FXML
 	private RadioButton tireur1, tireur2, tireur3, tireur4, tireur5, tireur6, tireur7, tireur11, tireur21, tireur31, tireur41, tireur51, tireur61, tireur71,  tireur111, tireur211, tireur311, tireur411, tireur511, tireur611, tireur711;
 	
@@ -41,6 +41,8 @@ public class DirectController {
 	chronoJm.scheduleAtFixedRate(chronoRun,1000,1000,TimeUnit.MILLISECONDS);
 	stratC.setVisible(false);
 	pauseC.setVisible(true);
+	tablG.setDisable(false);
+	tablD.setDisable(false);
 	}
 	@FXML
 	final Runnable chronoRun = new Runnable() {
@@ -76,7 +78,7 @@ public class DirectController {
 		annulTirG.setVisible(true);
 		selectionTir.setVisible(true);
 		tablG.setDisable(true);
-		tablG.setDisable(true);
+		tablD.setDisable(true);
 
 	}
 	
@@ -111,7 +113,7 @@ public class DirectController {
 		annulTirD.setVisible(true);
 		selectionTir.setVisible(true);
 		tablG.setDisable(true);
-		tablG.setDisable(true);
+		tablD.setDisable(true);
 
 	}
 	
@@ -132,7 +134,7 @@ public class DirectController {
 		selectionMin.setVisible(false);
 		selectionCarton.setVisible(false);
 		tablG.setDisable(false);
-		tablG.setDisable(false);
+		tablD.setDisable(false);
 	}
 	
 	
@@ -141,14 +143,14 @@ public class DirectController {
 		selectionCarton.setVisible(true);
 		annulTirG.setVisible(true);
 		tablG.setDisable(true);
-		tablG.setDisable(true);
+		tablD.setDisable(true);
 	}
 	@FXML
 	public void cartonD(MouseEvent event){
 		selectionCarton.setVisible(true);
 		annulTirD.setVisible(true);
 		tablG.setDisable(true);
-		tablG.setDisable(true);
+		tablD.setDisable(true);
 	}
 	
 	@FXML
@@ -156,7 +158,7 @@ public class DirectController {
 		selectionMin.setVisible(true);
 		annulTirG.setVisible(true);
 		tablG.setDisable(true);
-		tablG.setDisable(true);
+		tablD.setDisable(true);
 	}
 	
 	@FXML
@@ -164,7 +166,7 @@ public class DirectController {
 		selectionMin.setVisible(true);
 		annulTirD.setVisible(true);
 		tablG.setDisable(true);
-		tablG.setDisable(true);
+		tablD.setDisable(true);
 	}
 	
 	@FXML
@@ -173,6 +175,8 @@ public class DirectController {
 		selectionTir.setVisible(false);
 		tirLoc.setVisible(false);
 		deselection();
+		scoreG.setText("1");
+	
 	}
 	
 	@FXML
@@ -181,6 +185,7 @@ public class DirectController {
 		selectionTir.setVisible(false);
 		affichageTir.setVisible(false);
 		deselection();
+	
 		}
 	
 	@FXML
@@ -200,6 +205,7 @@ public class DirectController {
 		bleu.setDisable(false);
 		rouge.setDisable(false);
 		jaune.setDisable(false);
+		
 	}
 	
 	@FXML
@@ -212,6 +218,8 @@ public class DirectController {
 		rouge.setDisable(true);
 		deselection();
 		cartJaune.setVisible(true);
+		tablG.setDisable(false);
+		tablD.setDisable(false);
 	}
 	
 	@FXML
@@ -222,15 +230,30 @@ public class DirectController {
 		selectionMin.setVisible(false);
 		deselection();
 		deuxM.setVisible(true);
+		tablG.setDisable(false);
+		tablD.setDisable(false);
 	}
 	
 	@FXML
 	private void afficheJ(){ 
 		listeJoueurs.setVisible(true);
+		tablG.setDisable(true);
+		tablD.setDisable(true);
 	}
 	
 	@FXML
 	private void enleveLJ(){ 
 		listeJoueurs.setVisible(false);
+		tablG.setDisable(false);
+		tablD.setDisable(false);
+	}
+	
+	@FXML
+	private void temps(){ 
+		chronoJm.shutdown();
+		decompte.setVisible(true);
+		stratC.setVisible(true);
+		pauseC.setVisible(false);
+		decompte2.setVisible(true);
 	}
 }

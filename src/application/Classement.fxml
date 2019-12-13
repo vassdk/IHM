@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane disable="false" minHeight="630.4998779296875" prefHeight="630.4998779296875" prefWidth="525.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="494.5" layoutX="0.0" layoutY="135.0" stroke="BLACK" strokeType="INSIDE" width="525.0" />
+    <Text layoutX="54.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lidl StarLigue">
+      <font>
+        <Font size="25.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text font="$x1" layoutX="347.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Proligue" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc900" height="134.8134765625" layoutX="0.0" layoutY="0.0" stroke="BLACK" strokeType="INSIDE" style="-fx-background-color:#FFC900;&#10;" width="525.0" />
+    <Text layoutX="158.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classement">
+      <font>
+        <Font size="45.0" />
+      </font>
+    </Text>
+    <Line endX="-8.0" endY="-1.0" layoutX="271.0" layoutY="136.0" startX="-9.0" startY="512.0" />
+    <Line endX="421.0" endY="1.0" layoutX="101.0" layoutY="193.0" startX="-100.0" />
+    <Line endX="-148.0" endY="422.0" layoutX="185.0" layoutY="226.0" startX="-148.0" startY="-32.0" />
+    <Line endX="-148.0" endY="422.0" layoutX="450.0" layoutY="226.0" startX="-148.0" startY="-32.0" />
+    <Line endX="421.0" endY="1.0" layoutX="101.0" layoutY="230.0" startX="-98.0" startY="1.0" />
+    <Line endX="420.0" endY="0.0" layoutX="103.0" layoutY="270.0" startX="-100.0" />
+    <Line endX="420.0" endY="0.0" layoutX="103.0" layoutY="310.0" startX="-100.0" />
+    <Line endX="420.0" endY="0.0" layoutX="103.0" layoutY="350.0" startX="-100.0" />
+    <Line endX="420.0" endY="0.0" layoutX="103.0" layoutY="390.0" startX="-100.0" />
+    <Line endX="420.0" endY="0.0" layoutX="103.0" layoutY="430.0" startX="-100.0" />
+    <Line endX="420.0" endY="0.0" layoutX="103.0" layoutY="470.0" startX="-100.0" />
+    <Line endX="420.0" endY="0.0" layoutX="103.0" layoutY="510.0" startX="-100.0" />
+    <Line endX="420.0" endY="0.0" layoutX="103.0" layoutY="550.0" startX="-100.0" />
+    <Line endX="420.0" endY="0.0" layoutX="103.0" layoutY="590.0" startX="-100.0" />
+    <Line endX="420.0" endY="0.0" layoutX="103.0" layoutY="630.0" startX="-100.0" />
+    <Text layoutX="12.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <font>
+        <Font size="20.0" fx:id="x2" />
+      </font>
+    </Text>
+    <Text font="$x2" layoutX="13.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+    <Text font="$x2" layoutX="13.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+    <Text font="$x2" layoutX="13.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+    <Text font="$x2" layoutX="13.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+    <Text font="$x2" layoutX="13.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
+    <Text font="$x2" layoutX="13.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+    <Text font="$x2" layoutX="13.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" />
+    <Text font="$x2" layoutX="13.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" />
+    <Text font="$x2" layoutX="13.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+    <Text font="$x2" layoutX="11.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" />
+    <Text font="$x2" layoutX="277.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+    <Text font="$x2" layoutX="277.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
+    <Text font="$x2" layoutX="277.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
+    <Text font="$x2" layoutX="277.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
+    <Text font="$x2" layoutX="277.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
+    <Text font="$x2" layoutX="277.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
+    <Text font="$x2" layoutX="277.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" />
+    <Text font="$x2" layoutX="277.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" />
+    <Text font="$x2" layoutX="277.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" />
+    <Text font="$x2" layoutX="275.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" />
+    <Text font="$x2" layoutX="275.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" />
+    <Text font="$x2" layoutX="60.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paris" />
+    <Text font="$x2" layoutX="60.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tournay" />
+    <Text font="$x2" layoutX="60.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Siege" />
+    <Text font="$x2" layoutX="60.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tournefeuille" />
+    <Text font="$x2" layoutX="60.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bagneres" />
+    <Text font="$x2" layoutX="60.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tours" />
+    <Text font="$x2" layoutX="60.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lille" />
+    <Text font="$x2" layoutX="60.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marseille" />
+    <Text font="$x2" layoutX="60.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bourg" />
+    <Text font="$x2" layoutX="60.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assien" />
+    <Text font="$x2" layoutX="60.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bordeaux" />
+    <Text font="$x2" layoutX="321.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arcachon" />
+    <Text font="$x2" layoutX="321.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aste" />
+    <Text font="$x2" layoutX="321.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lourdes" />
+    <Text font="$x2" layoutX="321.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nantes" />
+    <Text font="$x2" layoutX="321.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Angers" />
+    <Text font="$x2" layoutX="321.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lyon" />
+    <Text font="$x2" layoutX="321.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aseinte" />
+    <Text font="$x2" layoutX="321.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lille" />
+    <Text font="$x2" layoutX="321.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pau" />
+    <Text font="$x2" layoutX="321.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bayonne" />
+    <Text font="$x2" layoutX="321.0" layoutY="620.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Biarritz" />
+  </children>
+</AnchorPane>
